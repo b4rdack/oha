@@ -1,21 +1,11 @@
 ---
 type: home
 slug: home
-title: "Demo Blog"
-description: "Example blog structure with hubs, articles, and cross-links."
+title: "META FAMILY. Ваш помощник по Once Human"
+description: "Гайды, помощь и компания по игре Once Human."
 ---
-
-![[npcover.svg]]
-
-# Demo Blog
-
-Welcome to this demo blog content set.
-
-This template shows a basic content layout:
-
-- home page
-- topic hubs
-- linked articles
-- search page
-
-Use these pages as a starting point and adapt them to your own topics.
+## Добро пожаловать на сайт русскоговорящего сообщества по игре Once Human
+Здесь ты сможешь найти:  
+▶ сборки на различные оружия  
+▶ гайды по основным механикам игры  
+▶ гайды по основым механикам каждого сценария

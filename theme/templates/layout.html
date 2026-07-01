@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   {{- $isHome := eq .Page.Type "home" -}}
   {{- $pageURL := .Canonical -}}
   {{- if not $pageURL }}{{- $pageURL = printf "%s/" .BaseURL -}}{{- end -}}
-  {{- $siteName := "Demo Blog" -}}
-  {{- $defaultOGImage := printf "%s/notepub.jpg" .AssetsBase -}}
+  {{- $siteName := "META FAMILY" -}}
+  {{- $defaultOGImage := printf "%s/mfc.jpg" .AssetsBase -}}
   {{- $metaOGImage := "" -}}
   {{- $metaOGImageAlt := "" -}}
   {{- $fmOverridesOGImage := false -}}
@@ -47,7 +47,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
   <meta name="theme-color" content="#ffffff" />
-  <link rel="icon" type="image/svg+xml" href="{{ .AssetsBase }}/notepub.svg" />
+  <link rel="icon" type="image/svg+xml" href="{{ .AssetsBase }}/mfc.svg" />
   <link rel="stylesheet" href="{{ .AssetsBase }}/styles.css" />
   {{- if .Page.Description }}
   <meta name="description" content="{{ .Page.Description }}" />
@@ -145,7 +145,7 @@
   <aside class="mobile-nav" data-nav-panel aria-hidden="true">
     <div class="mobile-nav-inner">
       <nav class="mobile-nav-links">
-        <a href="{{ .BaseURL }}/">Home</a>
+        <a href="{{ .BaseURL }}/">Главная страница</a>
         {{- range .Collections.home_hubs.Items }}
         <a href="{{ $.BaseURL }}/{{ .Slug }}">{{ .Title }}</a>
         {{- end }}
