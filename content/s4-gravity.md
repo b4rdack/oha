@@ -38,9 +38,10 @@ order: 6
 
 ## 3. МЕХАНИКИ
 ### 3.1. Награды
-Бездонная эссенция  
+
 
 ### 3.2. Реликвии
+Бездонная эссенция  
 
 ### 3.3. Глобальное событие Riftwalker
 ![s4-Riftwalker.webp](https://i.postimg.cc/rFrR71wV/s4-Riftwalker.webp)  
