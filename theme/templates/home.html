@@ -2,94 +2,123 @@
   {{ .Body }}
 </div>
 
-<!-- ТАЙМЕР ДО БЛИЖАЙШЕГО ЧАСА (3, 7, 11, 15, 19, 23) -->
-<div id="timer-container">
-  <div id="timer-label">До ближайшего обновления добычи с территорий</div>
-  <div id="timer-display">
-    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+<!-- ДВА ТАЙМЕРА РЯДОМ: МОСКВА И ЕВРОПА -->
+<div id="timers-wrapper">
+  
+  <!-- ТАЙМЕР 1: МОСКВА (UTC+3) -->
+  <div id="timer-container" class="timer-box">
+    <div id="timer-label-moscow" class="timer-label">Обновление добычи территорий по МСК (UTC+3)</div>
+    <div id="timer-display-moscow" class="timer-display">
+      <span id="hours-moscow">00</span>:<span id="minutes-moscow">00</span>:<span id="seconds-moscow">00</span>
+    </div>
+    <div id="timer-target-moscow" class="timer-target">Следующее обновление: <span id="target-hour-moscow">--</span>:00</div>
   </div>
-  <div id="timer-target">Следующее обновление добычи: <span id="target-hour">--</span>:00</div>
-  <div id="timer-progress">
-    <div id="progress-bar" style="width: 70%"></div>
+
+  <!-- ТАЙМЕР 2: ЕВРОПА (UTC+2, на час меньше) -->
+  <div id="timer-container" class="timer-box">
+    <div id="timer-label-europe" class="timer-label">Обновление добычи территорий по Европа (UTC+2)</div>
+    <div id="timer-display-europe" class="timer-display">
+      <span id="hours-europe">00</span>:<span id="minutes-europe">00</span>:<span id="seconds-europe">00</span>
+    </div>
+    <div id="timer-target-europe" class="timer-target">Следующее обновление: <span id="target-hour-europe">--</span>:00</div>
   </div>
+
 </div>
 
 <script>
   (function() {
-    // ЧАСЫ, К КОТОРЫМ ОТСЧИТЫВАЕМ (в формате 0-23)
+    // ЧАСЫ ДЛЯ ВСЕХ ТАЙМЕРОВ
     const TARGET_HOURS = [3, 7, 11, 15, 19, 23];
 
-    const hoursEl = document.getElementById('hours');
-    const minutesEl = document.getElementById('minutes');
-    const secondsEl = document.getElementById('seconds');
-    const targetHourEl = document.getElementById('target-hour');
-    const progressBar = document.getElementById('progress-bar');
+    // Функция создания таймера для конкретного часового пояса
+    function createTimer(timezoneOffset, elements) {
+      const { hoursEl, minutesEl, secondsEl, targetHourEl } = elements;
+      let targetTime = null;
+      let timerId = null;
 
-    let targetTime = null;
-    let timerId = null;
+      function getCurrentTime() {
+        const now = new Date();
+        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        return new Date(utc + (timezoneOffset * 3600000));
+      }
 
-    function findNextTarget() {
-      const now = new Date();
-      const currentHour = now.getHours();
-      const currentMinutes = now.getMinutes();
-      const currentSeconds = now.getSeconds();
+      function findNextTarget() {
+        const now = getCurrentTime();
+        const currentHour = now.getHours();
+        const currentMinutes = now.getMinutes();
+        const currentSeconds = now.getSeconds();
 
-      let nextHour = null;
-      for (let h of TARGET_HOURS) {
-        if (h > currentHour || (h === currentHour && currentMinutes === 0 && currentSeconds === 0)) {
-          nextHour = h;
-          break;
+        let nextHour = null;
+        for (let h of TARGET_HOURS) {
+          if (h > currentHour || (h === currentHour && currentMinutes === 0 && currentSeconds === 0)) {
+            nextHour = h;
+            break;
+          }
         }
+        if (nextHour === null) {
+          nextHour = TARGET_HOURS[0];
+          const next = new Date(now);
+          next.setDate(next.getDate() + 1);
+          next.setHours(nextHour, 0, 0, 0);
+          return next;
+        }
+
+        const target = new Date(now);
+        target.setHours(nextHour, 0, 0, 0);
+        return target;
       }
-      if (nextHour === null) {
-        nextHour = TARGET_HOURS[0];
-        const next = new Date(now);
-        next.setDate(next.getDate() + 1);
-        next.setHours(nextHour, 0, 0, 0);
-        return next;
+
+      function updateTimer() {
+        const now = getCurrentTime().getTime();
+        const diff = targetTime - now;
+
+        if (diff <= 0) {
+          targetTime = findNextTarget().getTime();
+          updateTimer();
+          return;
+        }
+
+        const totalSec = Math.floor(diff / 1000);
+        const hrs = Math.floor(totalSec / 3600);
+        const mins = Math.floor((totalSec % 3600) / 60);
+        const secs = totalSec % 60;
+
+        hoursEl.textContent = String(hrs).padStart(2, '0');
+        minutesEl.textContent = String(mins).padStart(2, '0');
+        secondsEl.textContent = String(secs).padStart(2, '0');
+
+        const targetDate = new Date(targetTime);
+        // Корректируем отображение целевого часа для текущего пояса
+        const targetHour = (targetDate.getHours() + timezoneOffset) % 24;
+        targetHourEl.textContent = String(targetHour).padStart(2, '0');
       }
 
-      const target = new Date(now);
-      target.setHours(nextHour, 0, 0, 0);
-      return target;
-    }
-
-    function updateTimer() {
-      const now = new Date().getTime();
-      const diff = targetTime - now;
-
-      if (diff <= 0) {
+      function startTimer() {
+        if (timerId) clearInterval(timerId);
         targetTime = findNextTarget().getTime();
         updateTimer();
-        return;
+        timerId = setInterval(updateTimer, 1000);
       }
 
-      const totalSec = Math.floor(diff / 1000);
-      const hrs = Math.floor(totalSec / 3600);
-      const mins = Math.floor((totalSec % 3600) / 60);
-      const secs = totalSec % 60;
-
-      hoursEl.textContent = String(hrs).padStart(2, '0');
-      minutesEl.textContent = String(mins).padStart(2, '0');
-      secondsEl.textContent = String(secs).padStart(2, '0');
-
-      const maxInterval = 6 * 3600;
-      const elapsed = maxInterval - totalSec;
-      const percent = Math.min(100, Math.max(0, (elapsed / maxInterval) * 100));
-      progressBar.style.width = percent + '%';
-
-      const targetDate = new Date(targetTime);
-      targetHourEl.textContent = String(targetDate.getHours()).padStart(2, '0');
+      startTimer();
     }
 
-    function startTimer() {
-      if (timerId) clearInterval(timerId);
-      targetTime = findNextTarget().getTime();
-      updateTimer();
-      timerId = setInterval(updateTimer, 1000);
-    }
+    // Инициализация для Москвы (UTC+3)
+    createTimer(3, {
+      hoursEl: document.getElementById('hours-moscow'),
+      minutesEl: document.getElementById('minutes-moscow'),
+      secondsEl: document.getElementById('seconds-moscow'),
+      targetHourEl: document.getElementById('target-hour-moscow'),
+    });
 
-    startTimer();
+    // Инициализация для Европы (UTC+2)
+    createTimer(2, {
+      hoursEl: document.getElementById('hours-europe'),
+      minutesEl: document.getElementById('minutes-europe'),
+      secondsEl: document.getElementById('seconds-europe'),
+      targetHourEl: document.getElementById('target-hour-europe'),
+    });
+
   })();
 </script>
 
