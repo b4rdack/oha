@@ -89,7 +89,7 @@
 
         const targetDate = new Date(targetTime);
         // Корректируем отображение целевого часа для текущего пояса
-        const targetHour = (targetDate.getHours() + timezoneOffset) % 24;
+        const targetHour = targetDate.getHours();
         targetHourEl.textContent = String(targetHour).padStart(2, '0');
       }
 
