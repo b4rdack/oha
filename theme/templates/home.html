@@ -94,7 +94,7 @@
         targetHourEl.textContent = String(targetHour).padStart(2, '0');
 
         const targetDateObj = new Date(targetTime);
-        const options = { day: 'numeric',  month: 'short' };
+        const options = { day: 'numeric',  month: 'long' };
         dateE1.textContent = targetDateObj.toLocaleDateString('ru-RU',options);
       }
 
