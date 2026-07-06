@@ -12,6 +12,7 @@
       <span id="hours-moscow">00</span>:<span id="minutes-moscow">00</span>:<span id="seconds-moscow">00</span>
     </div>
     <div id="timer-target-moscow" class="timer-target">Следующее обновление: <span id="target-hour-moscow">--</span>:00</div>
+    <div id="timer-date-moscow" class="timer-date"></div>
   </div>
 
   <!-- ТАЙМЕР 2: ЕВРОПА (UTC+2, на час меньше) -->
@@ -21,6 +22,7 @@
       <span id="hours-europe">00</span>:<span id="minutes-europe">00</span>:<span id="seconds-europe">00</span>
     </div>
     <div id="timer-target-europe" class="timer-target">Следующее обновление: <span id="target-hour-europe">--</span>:00</div>
+    <div id="timer-date-europe" class="timer-date"></div>
   </div>
 
 </div>
@@ -31,7 +33,7 @@
     const TARGET_HOURS = [3, 7, 11, 15, 19, 23];
     // Функция создания таймера для конкретного часового пояса
     function createTimer(timezoneOffset, elements) {
-      const { hoursEl, minutesEl, secondsEl, targetHourEl } = elements;
+      const { hoursEl, minutesEl, secondsEl, targetHourEl, dateE1 } = elements;
       let targetTime = null;
       let timerId = null;
       
@@ -90,6 +92,10 @@
         // Корректируем отображение целевого часа для текущего пояса
         const targetHour = targetDate.getHours();
         targetHourEl.textContent = String(targetHour).padStart(2, '0');
+
+        const targetDateObj = new Date(targetTime);
+        const options = { day: 'numeric',  month: 'short' };
+        dateE1.textContent = targetDateObj.toLocaleDateString('ru-RU',options);
       }
 
       function startTimer() {
@@ -108,6 +114,7 @@
       minutesEl: document.getElementById('minutes-moscow'),
       secondsEl: document.getElementById('seconds-moscow'),
       targetHourEl: document.getElementById('target-hour-moscow'),
+      dateE1: document.getElementById('timer-date-moscow')
     });
 
     // Инициализация для Европы (UTC+2)
@@ -116,6 +123,7 @@
       minutesEl: document.getElementById('minutes-europe'),
       secondsEl: document.getElementById('seconds-europe'),
       targetHourEl: document.getElementById('target-hour-europe'),
+      dateE1: document.getElementById('timer-date-europe')
     });
 
   })();
