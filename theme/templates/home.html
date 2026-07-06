@@ -41,8 +41,8 @@
     <div class="hub-filters" data-hub-filters>
      <!-- {{- range $hubs }}
       <button class="hub-pill" type="button" data-hub="{{ .Slug }}" data-hub-title="{{ .Title }}" data-hub-description="{{ .Description }}">{{ .Title }}</button> -->
-      {{- range $index, $hub := $hubs }}
-      <button class="hub-pill{{ if eq $index 0 }} is-active{{ end }}" type="button" data-hub="{{ .Slug }}" data-hub-title="{{ .Title }}" data-hub-description="{{ .Description }}">{{ .Title }}</button>
+    {{- range $index, $hub := $hubs }}
+    <button class="hub-pill{{ if eq $index 0 }} is-active{{ end }}" type="button" data-hub="{{ .Slug }}" data-hub-title="{{ .Title }}" data-hub-description="{{ .Description }}">{{ .Title }}</button>
       {{- end }}
     </div>
     {{- end }}
@@ -51,7 +51,10 @@
       <p class="muted" data-blog-description>Select a hub to filter articles.</p>
     </div> -->
     {{- $firstHub := index $hubs 0 }}
-    <div class="hub-meta">
+    <div class="hub-meta" 
+         data-active-hub="{{ $firstHub.Slug }}"
+         data-active-title="{{ $firstHub.Title }}"
+         data-active-description="{{ $firstHub.Description }}">
       <h3 data-blog-title>{{ $firstHub.Title }}</h3>
       <p class="muted" data-blog-description>{{ $firstHub.Description }}</p>
     </div>
