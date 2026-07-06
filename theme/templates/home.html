@@ -44,9 +44,17 @@
       {{- end }}
     </div>
     {{- end }}
-    <div class="hub-meta">
+   <!-- <div class="hub-meta">
       <h3 data-blog-title>Latest posts across all hubs</h3>
       <p class="muted" data-blog-description>Select a hub to filter articles.</p>
+    </div> -->
+    {{- $firstHub := index $hubs 0 }}
+    <div class="hub-meta" 
+       data-active-hub="{{ $firstHub.Slug }}"
+       data-active-title="{{ $firstHub.Title }}"
+       data-active-description="{{ $firstHub.Description }}">
+      <h3 data-blog-title>{{ $firstHub.Title }}</h3>
+      <p class="muted" data-blog-description>{{ $firstHub.Description }}</p>
     </div>
   </div>
 
