@@ -1210,4 +1210,10 @@ body.nav-open {
   .timer-display span {
     min-width: 40px;
   }
+
+  .timer-date {
+    font-size: 14px;
+    opacity: 0.6;
+    margin-top: 4px;
+    letter-spacing: 1px;
 }
