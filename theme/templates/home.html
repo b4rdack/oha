@@ -23,12 +23,32 @@
     <div id="timer-target-europe" class="timer-target">Следующее обновление: <span id="target-hour-europe">--</span>:<span id="target-hour-europe">00</span> <span id="timer-date-europe" class="timer-date-inline"></span></div>
   </div>
 
+  <!-- ТАЙМЕР 3: МОСКВА (UTC+3) -->
+  <div id="timer-container" class="timer-box">
+    <div id="timer-label-moscow-2" class="timer-label">Обновление добычи подземелий (SILO) по МСК (UTC+3)</div>
+    <div id="timer-display-moscow-2" class="timer-display">
+      <span id="hours-moscow-2">00</span>:<span id="minutes-moscow-2">00</span>:<span id="seconds-moscow-2">00</span>
+    </div>
+    <div id="timer-target-moscow-2" class="timer-target">Следующее обновление: <span id="target-hour-moscow-2">--</span>:<span id="target-hour-moscow-2">00</span> <span id="timer-date-moscow-2" class="timer-date-inline"></span></div>
+  </div>
+  
+  <!-- ТАЙМЕР 4: ЕВРОПА (UTC+2, на час меньше) -->
+  <div id="timer-container" class="timer-box">
+    <div id="timer-label-europe-2" class="timer-label">Обновление добычи территорий по Европа (UTC+2)</div>
+    <div id="timer-display-europe-2" class="timer-display">
+      <span id="hours-europe-2">00</span>:<span id="minutes-europe-2">00</span>:<span id="seconds-europe-2">00</span>
+    </div>
+    <div id="timer-target-europe-2" class="timer-target">Следующее обновление: <span id="target-hour-europe-2">--</span>:<span id="target-hour-europe-2">00</span> <span id="timer-date-europe-2" class="timer-date-inline"></span></div>
+  </div>
+
+
 </div>
 
 <script>
   (function() {
     // ЧАСЫ ДЛЯ ВСЕХ ТАЙМЕРОВ
     const TARGET_HOURS = [3, 7, 11, 15, 19, 23];
+    const TARGET_HOURS_2 = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23];
     // Функция создания таймера для конкретного часового пояса
     function createTimer(timezoneOffset, elements) {
       const { hoursEl, minutesEl, secondsEl, targetHourEl, dateE1 } = elements;
@@ -114,7 +134,6 @@
       targetHourEl: document.getElementById('target-hour-moscow'),
       dateE1: document.getElementById('timer-date-moscow')
     });
-
     // Инициализация для Европы (UTC+2)
     createTimer(2, {
       hoursEl: document.getElementById('hours-europe'),
@@ -123,8 +142,24 @@
       targetHourEl: document.getElementById('target-hour-europe'),
       dateE1: document.getElementById('timer-date-europe')
     });
+    // Инициализация второй группы для Москвы (UTC+3)
+    createTimer(3, {
+      hoursEl: document.getElementById('hours-moscow-2'),
+      minutesEl: document.getElementById('minutes-moscow-2'),
+      secondsEl: document.getElementById('seconds-moscow-2'),
+      targetHourEl: document.getElementById('target-hour-moscow-2'),
+      dateE1: document.getElementById('timer-date-moscow-2')
+    }, TARGET_HOURS_2);
 
-  })();
+    // Инициализация второй группы для Европы (UTC+2)
+    createTimer(2, {
+      hoursEl: document.getElementById('hours-europe-2'),
+      minutesEl: document.getElementById('minutes-europe-2'),
+      secondsEl: document.getElementById('seconds-europe-2'),
+      targetHourEl: document.getElementById('target-hour-europe-2'),
+      dateE1: document.getElementById('timer-date-europe-2')
+    });
+  }, TARGET_HOURS_2);
 </script>
 
 <section class="grid grid-favorites">
