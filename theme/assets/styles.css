@@ -1150,7 +1150,7 @@ body.nav-open {
 }
 
 .timer-box:last-child .timer-display {
-  color: #ffd700;
+  /* color: #ffd700; */
   text-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
 }
 
@@ -1223,10 +1223,3 @@ body.nav-open {
   .timer-display span {
     min-width: 40px;
   }
-
-  .timer-date {
-    font-size: 14px;
-    opacity: 0.6;
-    margin-top: 4px;
-    letter-spacing: 1px;
-}
