@@ -11,8 +11,7 @@
     <div id="timer-display-moscow" class="timer-display">
       <span id="hours-moscow">00</span>:<span id="minutes-moscow">00</span>:<span id="seconds-moscow">00</span>
     </div>
-    <div id="timer-target-moscow" class="timer-target">Следующее обновление: <span id="target-hour-moscow">--</span>:00</div>
-    <div id="timer-date-moscow" class="timer-date"></div>
+    <div id="timer-target-moscow" class="timer-target">Следующее обновление: <span id="target-hour-moscow">--</span>:00 <span id="timer-date-moscow" class="timer-date-inline"></span></div>
   </div>
 
   <!-- ТАЙМЕР 2: ЕВРОПА (UTC+2, на час меньше) -->
@@ -21,7 +20,7 @@
     <div id="timer-display-europe" class="timer-display">
       <span id="hours-europe">00</span>:<span id="minutes-europe">00</span>:<span id="seconds-europe">00</span>
     </div>
-    <div id="timer-target-europe" class="timer-target">Следующее обновление: <span id="target-hour-europe">--</span>:00</div>
+    <div id="timer-target-europe" class="timer-target">Следующее обновление: <span id="target-hour-europe">--</span>:00 <span id="timer-date-europe" class="timer-date-inline"></span></div>
     <div id="timer-date-europe" class="timer-date"></div>
   </div>
 
@@ -95,7 +94,7 @@
 
         const targetDateObj = new Date(targetTime);
         const options = { day: 'numeric',  month: 'long' };
-        dateE1.textContent = targetDateObj.toLocaleDateString('ru-RU',options);
+        dateE1.textContent = '(' + targetDateObj.toLocaleDateString('ru-RU',options) + ')';
       }
 
       function startTimer() {
