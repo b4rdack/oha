@@ -2,7 +2,7 @@
   {{ .Body }}
 </div>
 
-<!-- <section class="grid grid-favorites">
+<section class="grid grid-favorites">
   {{- $favorites := .Collections.home_favorites.Items }}
   {{- if $favorites }}
   {{- range $favorites }}
@@ -30,7 +30,7 @@
   {{- else }}
   <p class="muted">Список избранного пуст.</p>
   {{- end }}
-</section> -->
+</section>
 
 <section class="section blog">
   <div class="blog-header">
@@ -39,14 +39,12 @@
     {{- $firstHub := index $hubs 0 }}
     {{- if $hubs }}
     <div class="hub-filters" data-hub-filters>
-     {{- range $hubs }}
+      {{- range $hubs }}
       <button class="hub-pill" type="button" data-hub="{{ .Slug }}" data-hub-title="{{ .Title }}" data-hub-description="{{ .Description }}">{{ .Title }}</button>
-    <!-- {{- range $index, $hub := $hubs }}
-    <button class="hub-pill{{ if eq $index 0 }} is-active{{ end }}" type="button" data-hub="{{ .Slug }}" data-hub-title="{{ .Title }}" data-hub-description="{{ .Description }}">{{ .Title }}</button> -->
       {{- end }}
     </div>
     {{- end }}
-   <div class="hub-meta">
+    <div class="hub-meta">
       <h3 data-blog-title>Latest posts across all hubs</h3>
       <p class="muted" data-blog-description>Select a hub to filter articles.</p>
     </div>
