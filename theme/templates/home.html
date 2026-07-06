@@ -48,7 +48,7 @@
       <h3 data-blog-title>{{ $firstHub.Title }}</h3>
       <p class="muted" data-blog-description>{{ $firstHub.Description }}</p>
   </div>
-
+    
   {{- $articles := .Collections.home_articles.Items }}
   {{- if $articles }}
   <div class="grid blog-grid">
@@ -77,6 +77,22 @@
   <p class="muted">Список статей пуст.</p>
   {{- end }}
 </section>
+
+<script>
+(function() {
+  // Находим первую кнопку категории
+  var firstButton = document.querySelector('.hub-filters .hub-pill');
+  if (firstButton) {
+    // Добавляем класс активной кнопки
+    firstButton.classList.add('is-active');
+    
+    // Имитируем клик для применения фильтра
+    setTimeout(function() {
+      firstButton.click();
+    }, 50);
+  }
+})();
+</script>
 
 <script>
 (function() {
