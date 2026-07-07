@@ -2,7 +2,7 @@ site:
   id: default
   base_url: "http://127.0.0.1:8080/" # must end with /
   media_base_url: "http://127.0.0.1:8080/media/"
-  title: "META FAMILY"
+  title: "ONCE HUMAN ASSISTANT"
   description: "Гайды, помощь и компания по игре Once Human"
   default_og_image: "/assets/mfc.jpg"
 content:
