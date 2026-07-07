@@ -32,6 +32,134 @@
   {{- end }}
 </section> -->
 
+<!-- КОНТЕЙНЕР ДЛЯ ДВУХ ТАЙМЕРОВ -->
+<div id="timers-wrapper">
+  
+  <!-- ТАЙМЕР 1: КАЖДЫЕ 4 ЧАСА (МОСКВА) -->
+  <div class="timer-box">
+    <div class="timer-label">🔄 Обновление каждые 4ч (МСК, UTC+3)</div>
+    <div class="timer-display">
+      <span id="hours-4h">00</span>:<span id="minutes-4h">00</span>:<span id="seconds-4h">00</span>
+    </div>
+    <div class="timer-target">Следующее: <span id="target-hour-4h">--</span>:00 <span id="timer-date-4h" class="timer-date-inline"></span></div>
+  </div>
+
+  <!-- ТАЙМЕР 2: КАЖДЫЕ 2 ЧАСА (МОСКВА) -->
+  <div class="timer-box">
+    <div class="timer-label">🔄 Обновление каждые 2ч (МСК, UTC+3)</div>
+    <div class="timer-display">
+      <span id="hours-2h">00</span>:<span id="minutes-2h">00</span>:<span id="seconds-2h">00</span>
+    </div>
+    <div class="timer-target">Следующее: <span id="target-hour-2h">--</span>:00 <span id="timer-date-2h" class="timer-date-inline"></span></div>
+  </div>
+
+</div>
+
+<script>
+  (function() {
+    // НАСТРОЙКИ ТАЙМЕРОВ
+    const TIMERS_CONFIG = [
+      {
+        id: '4h',
+        hours: [3, 7, 11, 15, 19, 23], // каждые 4 часа
+        timezone: 3 // UTC+3 (Москва)
+      },
+      {
+        id: '2h',
+        hours: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23], // каждые 2 часа
+        timezone: 3 // UTC+3 (Москва)
+      }
+    ];
+
+    // ФУНКЦИЯ СОЗДАНИЯ ТАЙМЕРА
+    function createTimer(config) {
+      const { id, hours: targetHours, timezone } = config;
+      
+      const elements = {
+        hoursEl: document.getElementById(`hours-${id}`),
+        minutesEl: document.getElementById(`minutes-${id}`),
+        secondsEl: document.getElementById(`seconds-${id}`),
+        targetHourEl: document.getElementById(`target-hour-${id}`),
+        dateEl: document.getElementById(`timer-date-${id}`)
+      };
+
+      let targetTime = null;
+      let timerId = null;
+
+      function getCurrentTime() {
+        const now = new Date();
+        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        return new Date(utc + (timezone * 3600000));
+      }
+
+      function findNextTarget() {
+        const now = getCurrentTime();
+        const currentHour = now.getHours();
+        const currentMinutes = now.getMinutes();
+        const currentSeconds = now.getSeconds();
+
+        let nextHour = null;
+        for (let h of targetHours) {
+          if (h > currentHour || (h === currentHour && currentMinutes === 0 && currentSeconds === 0)) {
+            nextHour = h;
+            break;
+          }
+        }
+        if (nextHour === null) {
+          nextHour = targetHours[0];
+          const next = new Date(now);
+          next.setDate(next.getDate() + 1);
+          next.setHours(nextHour, 0, 0, 0);
+          return next;
+        }
+
+        const target = new Date(now);
+        target.setHours(nextHour, 0, 0, 0);
+        return target;
+      }
+
+      function updateTimer() {
+        const now = getCurrentTime().getTime();
+        const diff = targetTime - now;
+
+        if (diff <= 0) {
+          targetTime = findNextTarget().getTime();
+          updateTimer();
+          return;
+        }
+
+        const totalSec = Math.floor(diff / 1000);
+        const hrs = Math.floor(totalSec / 3600);
+        const mins = Math.floor((totalSec % 3600) / 60);
+        const secs = totalSec % 60;
+
+        elements.hoursEl.textContent = String(hrs).padStart(2, '0');
+        elements.minutesEl.textContent = String(mins).padStart(2, '0');
+        elements.secondsEl.textContent = String(secs).padStart(2, '0');
+
+        // Отображение целевого часа и даты
+        const targetDate = new Date(targetTime);
+        elements.targetHourEl.textContent = String(targetDate.getHours()).padStart(2, '0');
+        
+        const options = { day: 'numeric', month: 'long' };
+        elements.dateEl.textContent = '(' + targetDate.toLocaleDateString('ru-RU', options) + ')';
+      }
+
+      function startTimer() {
+        if (timerId) clearInterval(timerId);
+        targetTime = findNextTarget().getTime();
+        updateTimer();
+        timerId = setInterval(updateTimer, 1000);
+      }
+
+      startTimer();
+    }
+    // ЗАПУСК ВСЕХ ТАЙМЕРОВ
+    TIMERS_CONFIG.forEach(config => createTimer(config));
+
+  })();
+</script>
+
 <section class="section blog">
   <div class="blog-header">
     <h2>СТАТЬИ</h2>
