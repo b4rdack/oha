@@ -20,8 +20,8 @@ order: 21
 
 Так же можно получить дополнительные косметические награды в виде эффектов покрытия (анимация) для вашего значка сценария в профиле.  
 ![Prizma-Pokrytie.png](https://i.postimg.cc/K8Fg8wY9/Prizma-Pokrytie.png)  
-![Prizma-Zadania-pokrytia.jpg](https://i.postimg.cc/j529fMMh/Prizma-Zadania-pokrytia.jpg)  
 🔰 **Завершите 2 (два) задания из 3 (трёх), чтобы получить получить оба варианта анимаций.**  
+![Prizma-Zadania-pokrytia.jpg](https://i.postimg.cc/j529fMMh/Prizma-Zadania-pokrytia.jpg)  
 ▶ **Всеведущий и Всемогущий**  
 ▶ **Дикий Всадник**  
 > Найдите девианта "Берсеркозавр Рекс" и завершите его очищение.  
