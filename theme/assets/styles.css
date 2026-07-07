@@ -1143,12 +1143,12 @@ body.nav-open {
 /* РАЗНЫЕ АКЦЕНТЫ ДЛЯ КАЖДОГО ТАЙМЕРА */
 .timer-box:first-child .timer-display {
   color: #00e5ff;
-  text-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+/*  text-shadow: 0 0 30px rgba(0, 229, 255, 0.2); */
 }
 
 .timer-box:last-child .timer-display {
   color: #ffd700;
-  text-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+/*  text-shadow: 0 0 30px rgba(255, 215, 0, 0.2); */
 }
 
 /* ЭЛЕМЕНТЫ ТАЙМЕРА */
