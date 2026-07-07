@@ -21,6 +21,7 @@ order: 3
 1️⃣ Реверс-инжиниринг  
 ![Glavnoe-menu-verstaka.png](https://i.postimg.cc/ydgQdwbv/Glavnoe-menu-verstaka.png)  
 > Для исследования используются вещи и найденные в мусоре или сооружения собранные с помощью специального инструмента.  
+
 ![Raznica-predmetov.png](https://i.postimg.cc/zfj57Rzj/Raznica-predmetov.png)  
 2️⃣ Технологические изобретения  
 ![Glavnoe-menu-verstaka2.png](https://i.postimg.cc/fLt2L6rK/Glavnoe-menu-verstaka2.png)  
