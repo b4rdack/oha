@@ -36,31 +36,34 @@
   <div class="blog-header">
     <h2>СТАТЬИ</h2>
     {{- $hubs := .Collections.home_hubs.Items }}
-    {{- $firstHub := index $hubs 0 }}
     {{- if $hubs }}
     <div class="hub-filters" data-hub-filters>
-      {{- range $hubs }}
-      <button class="hub-pill" type="button" data-hub="{{ .Slug }}" data-hub-title="{{ .Title }}" data-hub-description="{{ .Description }}">{{ .Title }}</button>
+      {{- range $index, $hub := $hubs }}
+      <button class="hub-pill{{ if eq $index 0 }} is-active{{ end }}" 
+              type="button" 
+              data-hub="{{ .Slug }}" 
+              data-hub-title="{{ .Title }}" 
+              data-hub-description="{{ .Description }}">
+        {{ .Title }}
+      </button>
       {{- end }}
     </div>
     {{- end }}
-    <div class="hub-meta" data-active-hub="{{ $firstHub.Slug }}" data-active-title="{{ $firstHub.Title }}" data-active-description="{{ $firstHub.Description }}">
+    
+    {{- $firstHub := index $hubs 0 }}
+    <div class="hub-meta" 
+         data-active-hub="{{ $firstHub.Slug }}"
+         data-active-title="{{ $firstHub.Title }}"
+         data-active-description="{{ $firstHub.Description }}">
       <h3 data-blog-title>{{ $firstHub.Title }}</h3>
       <p class="muted" data-blog-description>{{ $firstHub.Description }}</p>
     </div>
   </div>
-    
+
   {{- $articles := .Collections.home_articles.Items }}
   {{- if $articles }}
   <div class="grid blog-grid">
     {{- range $articles }}
-      {{- $show := false }}
-      {{- range $hub := .FM.hub }}
-        {{- if eq $hub $firstHub.Slug }}
-          {{- $show = true }}
-        {{- end }}
-      {{- end }}
-      {{- if $show }}
     <article class="card blog-card" data-article-card data-hubs="{{- range $i, $hub := .FM.hub -}}{{- if $i }} {{ end -}}{{- $hub -}}{{- end -}}">
       <a class="blog-link" href="{{ $.BaseURL }}{{ .Path }}">
         {{- if .FM.image }}
@@ -79,13 +82,27 @@
         </div>
       </a>
     </article>
-      {{- end }}
     {{- end }}
   </div>
   {{- else }}
   <p class="muted">Список статей пуст.</p>
   {{- end }}
 </section>
+
+<!-- Скрипт для скрытия всех статей кроме первой категории -->
+<script>
+(function() {
+  var firstHub = '{{ (index $hubs 0).Slug }}';
+  var articles = document.querySelectorAll('[data-article-card]');
+  
+  articles.forEach(function(article) {
+    var hubs = article.getAttribute('data-hubs') || '';
+    if (hubs.indexOf(firstHub) === -1) {
+      article.style.display = 'none';
+    }
+  });
+})();
+</script>
 
 <!-- <script>
 (function() {
