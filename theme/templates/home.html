@@ -78,6 +78,41 @@
   {{- end }}
 </section>
 
+<script>
+(function() {
+  // Ждём полной загрузки
+  function init() {
+    var firstButton = document.querySelector('.hub-filters .hub-pill');
+    if (firstButton) {
+      // Добавляем класс активной кнопки
+      firstButton.classList.add('is-active');
+      
+      // Находим функцию фильтрации в глобальном объекте
+      if (window.filterArticles) {
+        window.filterArticles(firstButton.dataset.hub);
+      } else if (window.updateArticles) {
+        window.updateArticles(firstButton.dataset.hub);
+      } else {
+        // Пробуем через событие
+        var event = new Event('change', { bubbles: true });
+        firstButton.dispatchEvent(event);
+        
+        // Или через клик (но с большей задержкой)
+        setTimeout(function() {
+          firstButton.click();
+        }, 100);
+      }
+    }
+  }
+  
+  if (document.readyState === 'complete') {
+    init();
+  } else {
+    window.addEventListener('load', init);
+  }
+})();
+</script>
+
 <!-- <script>
 (function() {
   // Находим первую кнопку категории
