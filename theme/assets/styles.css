@@ -1110,6 +1110,9 @@ body.nav-open {
   background: transparent;
 }
 
+.blog-grid .blog-card {
+  display: none;
+}
 
 /* Два таймера рядом */
 
