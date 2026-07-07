@@ -1098,7 +1098,6 @@ body.nav-open {
   background: transparent;
 }
 
-
 .footer-vcru {
   display: inline-flex;
   align-items: center;
@@ -1110,8 +1109,7 @@ body.nav-open {
   background: transparent;
 }
 
-/* Два таймера рядом */
-
+/* КОНТЕЙНЕР ДЛЯ ДВУХ ТАЙМЕРОВ */
 #timers-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -1122,6 +1120,7 @@ body.nav-open {
   padding: 20px;
 }
 
+/* ОБЩИЙ СТИЛЬ ДЛЯ КАЖДОГО ТАЙМЕРА */
 .timer-box {
   flex: 1;
   min-width: 280px;
@@ -1134,15 +1133,14 @@ body.nav-open {
   text-align: center;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .timer-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
 }
 
-/* Разный акцент для каждого таймера */
+/* РАЗНЫЕ АКЦЕНТЫ ДЛЯ КАЖДОГО ТАЙМЕРА */
 .timer-box:first-child .timer-display {
   color: #00e5ff;
   text-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
@@ -1153,6 +1151,7 @@ body.nav-open {
   text-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
 }
 
+/* ЭЛЕМЕНТЫ ТАЙМЕРА */
 .timer-label {
   font-size: 16px;
   text-transform: uppercase;
@@ -1177,31 +1176,24 @@ body.nav-open {
 
 .timer-target {
   font-size: 16px;
-  margin: 10px 0 18px;
+  margin: 10px 0 0;
   opacity: 0.7;
 }
 
 .timer-target span {
-  font-size: 16px;
+  color: inherit;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+.timer-date-inline {
+  font-size: inherit;
+  opacity: 1;
+  margin-left: 6px;
   font-weight: normal;
 }
 
-  .timer-date {
-    font-size: 14px;
-/*    opacity: 0.6;
-    margin-top: 4px;
-    letter-spacing: 1px;*/
-    font-weight: normal;
-  }
-
-.timer-date-inline {
-    font-size: 16px;
-/*    opacity: 0.7;
-    margin-left: 6px; */
-    font-weight: normal; 
-  }
-
-/* Адаптивность для мобильных */
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ */
 @media (max-width: 650px) {
   #timers-wrapper {
     flex-direction: column;
@@ -1223,3 +1215,4 @@ body.nav-open {
   .timer-display span {
     min-width: 40px;
   }
+}
