@@ -47,12 +47,20 @@
     <div class="hub-meta" data-active-hub="{{ $firstHub.Slug }}" data-active-title="{{ $firstHub.Title }}" data-active-description="{{ $firstHub.Description }}">
       <h3 data-blog-title>{{ $firstHub.Title }}</h3>
       <p class="muted" data-blog-description>{{ $firstHub.Description }}</p>
+    </div>
   </div>
     
   {{- $articles := .Collections.home_articles.Items }}
   {{- if $articles }}
   <div class="grid blog-grid">
     {{- range $articles }}
+      {{- $show := false }}
+      {{- range $hub := .FM.hub }}
+        {{- if eq $hub $firstHub.Slug }}
+          {{- $show = true }}
+        {{- end }}
+      {{- end }}
+      {{- if $show }}
     <article class="card blog-card" data-article-card data-hubs="{{- range $i, $hub := .FM.hub -}}{{- if $i }} {{ end -}}{{- $hub -}}{{- end -}}">
       <a class="blog-link" href="{{ $.BaseURL }}{{ .Path }}">
         {{- if .FM.image }}
@@ -71,6 +79,7 @@
         </div>
       </a>
     </article>
+      {{- end }}
     {{- end }}
   </div>
   {{- else }}
@@ -78,7 +87,7 @@
   {{- end }}
 </section>
 
-<script>
+<!-- <script>
 (function() {
   // Находим первую кнопку категории
   var firstButton = document.querySelector('.hub-filters .hub-pill');
@@ -94,7 +103,7 @@
 })();
 </script>
 
-<!-- <script>
+<script>
 (function() {
   var firstHubButton = document.querySelector('[data-hub-filters] .hub-pill');
   if (firstHubButton) {
