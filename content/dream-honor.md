@@ -6,7 +6,7 @@ description: "Позволяет мета-людям получить новые
 Так же в зависимости от рейтинга награды могут меняться косметически."
 hub:
   - "scenarios"
-order: 20
+order: 22
 ---
 ![Sny.png](https://i.postimg.cc/hGVvb5mP/Sny.png)  
 
