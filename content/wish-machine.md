@@ -6,6 +6,7 @@ description: "Wish machine, Машина желаний или просто - И
 hub:
   - "bases-mech"
 order: 2
+image: /static/art/0401.webp
 ---
 ![[art/0401.webp]]
 
