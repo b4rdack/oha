@@ -181,7 +181,7 @@ jobs:
             --exclude '.github/' \
             --exclude '.obsidian/' \
             --exclude '*.md' \
-            ./content/ ./dist/static/
+            ./content/ ./dist/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
