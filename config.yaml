@@ -1,7 +1,7 @@
 site:
   id: default
   base_url: "https://once-human-assist.ru/" # must end with /
-  media_base_url: "https://once-human-assist.ru/"
+  media_base_url: "https://once-human-assist.ru/static/"
   title: "ONCE HUMAN ASSISTANT"
   description: "Гайды, помощь и компания по игре Once Human"
   default_og_image: "/assets/mfc.jpg"
