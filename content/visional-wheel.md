@@ -6,8 +6,9 @@ description: "После активации Колесо видений иска
 hub:
   - "visual-wheels"
 order: 1
+image: /static/vision-wheel/vision-wheel-logo.webp
 ---
-![Once-Human-captura.jpg](https://i.postimg.cc/vHmQfVqs/Once-Human-captura.jpg)  
+![[vision-wheel/vision-wheel-logo.webp]]  
 **Метка Колеса видений меняет правила сценария.**  
 
 Каждый цикл Колеса видений **длится примерно 2-3 месяца**.  
