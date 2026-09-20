@@ -7,6 +7,8 @@ hub:
   - "basics-game"
 order: 2
 image: /static/art/0300.webp
+related:
+  - "store-account"
 ---
 ![[art/0300.webp]]  
 **Персонаж** - это основной актер вокруг которого происходят все истории.  
