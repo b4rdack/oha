@@ -6,8 +6,9 @@ description: "Оптимизация настроек операционной �
 hub:
   - "optimise"
 order: 1
+image: /static/art/0208.webp
 ---
-![0208.jpg](https://i.postimg.cc/QNv8xr8f/0208.jpg)  
+![[art/0208.webp]]  
 **Конфигурация:**
 > Процессор: Intel  i5 13400F  
 > Оперативная память: DDR5 32GB  
