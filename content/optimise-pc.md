@@ -6,7 +6,7 @@ description: "Оптимизация настроек операционной �
 hub:
   - "optimise"
 order: 1
-image: /static/art/0208.webp
+image: /static/art/0014.webp
 ---
 ## Введение
 **Пример конфигурации:**
