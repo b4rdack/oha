@@ -7,13 +7,12 @@ description: "Позволяет мета-людям получить новые
 hub:
   - "scenario-honor"
 order: 24
+image: /static/scenario-honor/Арена.webp
 ---
-![Arena.png](https://i.postimg.cc/nzZzdGKV/Arena.png)  
-
 ### Список наград и очки сценария доступных для получения при первом прохождении
-![Arena-Nagrady-1.png](https://i.postimg.cc/j25kh2Wz/Arena-Nagrady-1.png)
+![[scenario-honor/Арена - Награды 1.webp]]  
 ### Список наград и очки сценария доступных для получении при повторном прохождении
-![Arena-Nagrady-2.png](https://i.postimg.cc/QCtnqCBQ/Arena-Nagrady-2.png)  
+![[scenario-honor/Арена - Награды 2.webp]]  
 
 **Для получения наград, необходимо выполнять действия в критериях оценки, чтобы зарабатывать очки в рейтинге сценария:**  
 ▶ Поймать девиантов значение которого более или равно 3.  
@@ -22,11 +21,11 @@ order: 24
 
 > Некоторые критерии оценки имеют ограничения по очкам, а так же очки не начисляются когда сценарий заканчивается и переходит в последнюю фазу.  
 
-![Arena-Zadania.png](https://i.postimg.cc/3w1Zd9dz/Arena-Zadania.png)  
+![[scenario-honor/Арена - Задания.webp]]  
 
 Дополнительно можно получить дополнительные косметические награды в виде эффектов покрытия (изменение анимации) для вашего значка сценария в профиле.  
-![Arena-Pokrytie.png](https://i.postimg.cc/3w1Zd9d6/Arena-Pokrytie.png)  
-![Arena-Zadania-pokrytia.png](https://i.postimg.cc/fbCvJ5J6/Arena-Zadania-pokrytia.png)  
+!![[scenario-honor/Арена - Задания покрытия.webp]]    
+!![[scenario-honor/Арена - Покрытие.webp]]  
 ▶ **Начало Хаоса**  
 > Создай в "Капсуле слияния" деваинта из мутагена "Хаос".  
 
