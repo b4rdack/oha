@@ -8,8 +8,6 @@ hub:
 order: 50
 image: /static/guides/tech-synth.webp
 ---
-![1782586449.png](https://i.postimg.cc/13MSY3m9/1782586449.png)
-
 ## Начальная игра
 ![Nacal_nye.png](https://i.postimg.cc/9Q8Jz6XF/Nacal_nye.png)  
 
