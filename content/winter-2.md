@@ -8,7 +8,7 @@ related:
   - "winter-4"
 order: 2
 ---
-![0504.jpg](https://i.postimg.cc/3rCsCk1V/0504.jpg)
+![[art/0504.webp]]  
 
 **Существует два вида тепловых вышек:**  
 1️⃣ Личная тепловая вышка  
