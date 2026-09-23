@@ -6,6 +6,7 @@ description: "Формулы для технологических изобре�
 hub:
   - "bases-mech"
 order: 50
+image: /static/guides/tech-synth.webp
 ---
 ![1782586449.png](https://i.postimg.cc/13MSY3m9/1782586449.png)
 
