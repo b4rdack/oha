@@ -1,6 +1,6 @@
 ---
 type: article
-slug: about-manibus
+slug: manibus-crisis
 title: "КРИЗИСНЫЕ СИТУАЦИИ СЦЕНАРИЙ «МАНИБУС»"
 description: "Активности (кризисные ситуации), которые встречаются только на сценарии «Манибус»."
 hub:
