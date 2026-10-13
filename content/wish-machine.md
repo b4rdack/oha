@@ -5,7 +5,7 @@ title: "Машина желаний"
 description: "Wish machine, Машина желаний или просто - Игровой автомат."
 hub:
   - "bases-mech"
-order: 2
+order: 5
 image: /static/art/0401.webp
 ---
 ## 1️⃣ Награды за игру в игровом автомате и получение билетов для игры
