@@ -3,7 +3,7 @@ type: article
 slug: currency-eterland
 title: "Валюта Вечной земли"
 description: "Виды валюты острова. Способы их получения и для чего их можно использовать."
-order: 32
+order: 31
 image: /static/art/eterland-logo.webp
 ---
 ## Получение астрального песка и астреалита
