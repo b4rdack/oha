@@ -5,7 +5,7 @@ title: "Получение интересных вариантов девиан�
 description: "Интересные комбинации девиантов и предметов при синтезе."
 hub:
   - "deviants"
-order: 1
+order: 10
 image: /static/art/0102.webp
 ---
 ![[art/0102.webp]]  
