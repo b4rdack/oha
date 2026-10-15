@@ -10,14 +10,6 @@ order: 22
 ---
 ![Sny.png](https://i.postimg.cc/hGVvb5mP/Sny.png)  
 
-**Небольшие визуальные награды:** значок профиля, кубок, эмблема.  
-![malen_kie-nagrady1.png](https://i.postimg.cc/1tM78srZ/malen_kie-nagrady1.png)  
-
-**Призматический ник** 
-> отображается только на сценарии, где был получен и использовать его может только тот персонаж, который его получил  
-
-![nik.png](https://i.postimg.cc/CK8VnBz3/nik.png)
-
 **Полный список наград и очки сценария доступных для получения при первом прохождении**  
 ![nagrady.png](https://i.postimg.cc/tg6HnZs0/nagrady.png)  
 
