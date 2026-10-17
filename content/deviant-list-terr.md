@@ -12,6 +12,6 @@ image: /static/guides/Синтез-1.webp
 Список  
 |           |       |
 | --------- | ----- |
-| ![[deviants/hydronaut-fish.png|50]]         | Рыба-гидронавт     |
-|           |       |
+| ![[deviants/hydronaut-fish.png]]         | **Рыба-гидронавт**     |
+| **Где найти?** | SILO EX1 (Сценарий "Путь Зимы") |
 |           |       |
