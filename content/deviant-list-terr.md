@@ -1,12 +1,12 @@
 ---
 type: article
 slug: deviant-territory
-title: "Территориальные девианты"
+title: "Территориальные девианты (1)"
 description: "Список территориальных девиантов и способы их получения."
 hub:
   - "deviants"
 order: 70
-image: /static/guides/Синтез-1.webp
+image: /static/art/0209.webp
 ---
 
 ![Рыба-гидронавт](/static/deviants/hydronaut-fish.png)    
