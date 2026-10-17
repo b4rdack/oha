@@ -9,8 +9,8 @@ order: 70
 image: /static/guides/Синтез-1.webp
 ---
 
-| Заголовок | Текст |
+Список
 | --------- | ----- |
-| ![[deviants/hydronaut-fish.png]         | Рыба=гидронавт     |
+| ![[deviants/hydronaut-fish.png]]         | Рыба-гидронавт     |
 |           |       |
 |           |       |
