@@ -10,6 +10,7 @@ image: /static/guides/Синтез-1.webp
 ---
 
 Список  
+|           |       |
 | --------- | ----- |
 | ![[deviants/hydronaut-fish.png]]         | Рыба-гидронавт     |
 |           |       |
