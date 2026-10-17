@@ -9,9 +9,19 @@ order: 70
 image: /static/guides/Синтез-1.webp
 ---
 
-Список  
-|           |       |
-| --------- | ----- |
-| ![[deviants/hydronaut-fish.png]]         | **Рыба-гидронавт** <br> Применяется для ускорение работы очистительного аппарата для воды |
-| **Где найти?** | SILO EX1 (Сценарий "Путь Зимы") |
-| **Какие способности искать** |  |
+<div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+  
+  <!-- Блок с картинкой -->
+  <div style="flex-shrink: 0;">
+    <img src="deviants/hydronaut-fish.png" alt="Рыба-гидронавт" style="width: 150px; border-radius: 8px;">
+  </div>
+
+  <!-- Блок с текстом -->
+  <div>
+    <h3 style="margin-top: 0;">Рыба-гидронавт</h3>
+    <p>Применяется для ускорения работы очистительного аппарата для воды.</p>
+    <p><strong>Где найти?</strong> SILO EX1 (Сценарий "Путь Зимы")</p>
+    <p><strong>Какие способности искать:</strong> ...</p>
+  </div>
+
+</div>
