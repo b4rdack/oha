@@ -158,7 +158,7 @@ image: /static/abyss/abyss-logo.webp
 ◾ Пространственный куб.  
 ◾ Снежный шар.  
 ◾ H-37.  
-◾ Ребекка.
+◾ Ребекка.  
 ![[abyss/abyss-deviants.webp]]  
 
 ## 6️⃣ МОДИФИКАЦИИ
