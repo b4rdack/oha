@@ -1,6 +1,6 @@
 ---
 type: article
-slug: about-isles-of-abyss
+slug: survival-isles-of-abyss
 title: "ВЫЖИВАНИЕ НА СЦЕНАРИИ «ОСТРОВА БЕЗДНЫ»"
 description: "Борьба с негативными эффектами погодных явлений на островах в различных регионах."
 hub:
