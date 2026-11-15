@@ -68,9 +68,14 @@ b, strong {
   border-radius: 999px;
   font-size: 0.9rem;
   background: #fff;
+  color: var(--fg);
 }
 
-.home-button:hover { text-decoration: none; background: var(--soft); }
+.home-button:hover {
+  text-decoration: none;
+  background: #e6c76a;
+  border-color: #e6c76a;
+}
 
 .search-button,
 .search-link {
