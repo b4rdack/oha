@@ -6,7 +6,7 @@
   --bg: #1E1E22;
   --fg: #0a0a0a;
   --ink: #E8E6E3;
-  --bold-ink: #ffd700;
+  --bold-ink: #d9b44a;
   --muted: #5b5b5b;
   --card: #f7f7f7;
   --soft: #f5f5f5;
@@ -31,7 +31,7 @@ button {
   color: var(--fg);
 }
 
-a { color: inherit; text-decoration: none; }
+a { color: #1E1E22; text-decoration: none; }
 
 a:hover { text-decoration: underline; }
 
