@@ -902,6 +902,7 @@ b, strong {
 
 .site-footer {
   border-top: 1px solid var(--border);
+  background: #0F1114;
   padding: 30px 0 30px;
   margin-top: 60px;
   color: var(--muted);
@@ -948,8 +949,6 @@ b, strong {
     display: none !important;
   }
 }
-
-
 
 .icon-button {
   border: 1px solid var(--border);
