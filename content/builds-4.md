@@ -1,7 +1,7 @@
 ---
 type: article
 slug: builds-about-modification
-title: "5. Модификации"
+title: "4. Модификации"
 description: "Что такое модификации и чего они нужны. Разновидности модификаций. Способы их получения и улучшения."
 hub:
   - "builds-weapons"
