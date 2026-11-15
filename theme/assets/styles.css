@@ -821,6 +821,12 @@ b, strong {
   mask-position: center;
 }
 
+.prose h1 { color: #FFFFFF; }
+
+.prose h2 { color: #F5F0E6; }
+
+.prose h3 { color: #E8E6E3; }
+
 .footer-built a.is-external::after {
   content: "";
   display: inline-block;
