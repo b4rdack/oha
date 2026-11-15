@@ -8,7 +8,7 @@ hub:
 order: 1
 related:
   - "builds-equip-selection"
-  - "builds-2"
+  - "builds-accessories-selection"
 image: /static/art/0007.webp
 ---
 **Билды бывают двух направлений:**  
