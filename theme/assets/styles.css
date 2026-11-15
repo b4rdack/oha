@@ -515,10 +515,12 @@ b, strong {
 
 .hub-meta h3 {
   margin: 0 0 0.5em;
+  color: var(--bold-ink);
 }
 
 .hub-meta .muted {
   margin: 0;
+  color: var(--ink);
 }
 
 .hub-meta {
@@ -541,8 +543,8 @@ b, strong {
 }
 
 .hub-pill.is-active {
-  background: var(--ink);
-  color: #fff;
+  background: var(--bold-ink);
+  color: var(--fg);
   border-color: var(--ink);
 }
 
@@ -601,7 +603,7 @@ b, strong {
 .blog-body h3 {
   margin-top: 0;
   margin-bottom: 8px;
-  color: var(--bold-ink);
+  color: var(--fg);
 }
 
 .blog-body p {
