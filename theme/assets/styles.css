@@ -83,7 +83,7 @@ a:hover { text-decoration: underline; }
 .search-button:hover {
   opacity: 1;
   background: var(--soft);
-  color: var(--ink);
+  color: var(--fg);
 }
 
 .search-trigger { display: flex; align-items: center; gap: 8px; }
@@ -129,7 +129,7 @@ a:hover { text-decoration: underline; }
   border-radius: 10px;
   border: 1px solid var(--border);
   background: #fff;
-  color: var(--ink);
+  color: var(--fg);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -528,7 +528,7 @@ a:hover { text-decoration: underline; }
 .hub-pill {
   border: 1px solid var(--border);
   background: #fff;
-  color: var(--ink);
+  color: var(--fg);
   border-radius: 999px;
   padding: 6px 12px;
   font-size: 0.85rem;
@@ -679,7 +679,7 @@ a:hover { text-decoration: underline; }
   padding: 14px 16px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  border-left: 4px solid var(--ink);
+  border-left: 4px solid var(--fg);
   background: var(--card);
 }
 
@@ -940,7 +940,7 @@ a:hover { text-decoration: underline; }
 .icon-button {
   border: 1px solid var(--border);
   background: #fff;
-  color: var(--ink);
+  color: var(--fg);
   width: 36px;
   height: 36px;
   border-radius: 10px;
