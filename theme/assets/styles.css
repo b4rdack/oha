@@ -913,6 +913,7 @@ b, strong {
   margin-top: 60px;
   color: var(--muted);
   font-size: 14px;
+  justify-content: center;
 }
 
 .footer-inner {
