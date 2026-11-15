@@ -881,7 +881,7 @@ b, strong {
 
 .tags { display: flex; gap: 8px; flex-wrap: wrap; }
 
-.tag { background: var(--bold-ink); padding: 4px 10px; border-radius: 999px; font-size: 0.8rem; }
+.tag { background: #1864AB; padding: 4px 10px; border-radius: 999px; font-size: 0.8rem; }
 
 .section { margin-top: 28px; }
 
