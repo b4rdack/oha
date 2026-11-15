@@ -511,11 +511,11 @@ b, strong {
   gap: 8px;
   justify-content: center;
   max-width: 700px;
-  color: var(--bold-ink);
 }
 
 .hub-meta h3 {
-  margin: 0 0 0.5em;  
+  margin: 0 0 0.5em;
+  color: var(--bold-ink);
 }
 
 .hub-meta .muted {
