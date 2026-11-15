@@ -553,9 +553,9 @@ b, strong {
 }
 
 .hub-pill.is-active:hover {
-  background: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
+  background: #e6c76a;
+  color: var(--fg);
+  border-color: #e6c76a;
 }
 
 .blog-grid {
