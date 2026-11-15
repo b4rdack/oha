@@ -1,6 +1,6 @@
 ---
 type: article
-slug: builds-about-modification
+slug: builds-calibration-list
 title: "Калибровочные чертежи"
 description: "Краткая информация о калибровках, их бонусы, а также способы получения. Список калибровочных чертежей по видам оружия и их описание."
 hub:
