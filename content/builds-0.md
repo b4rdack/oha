@@ -7,7 +7,7 @@ hub:
   - "builds-weapons"
 order: 1
 related:
-  - "builds-1"
+  - "builds-equip-selection"
   - "builds-2"
 image: /static/art/0007.webp
 ---
