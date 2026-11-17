@@ -1,7 +1,7 @@
 ---
 type: article
-slug: deviant-territory-1
-title: "Территориальные девианты (1)"
+slug: deviant-territory-list
+title: "Территориальные девианты"
 description: "Список территориальных девиантов и способы их получения."
 hub:
   - "deviants"
