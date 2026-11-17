@@ -1,6 +1,6 @@
 ---
 type: article
-slug: deviant-battle-list
+slug: deviant-lethal-rabbit
 title: "Джентльмен кролик"
 description: "В прошлом убийца, а сейчас приличный джентльмен."
 order: 1
