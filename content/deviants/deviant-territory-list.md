@@ -2,7 +2,7 @@
 type: article
 slug: deviant-battle-list
 title: "Боевые девианты"
-description: "Список территориальных девиантов и способы их получения.2"
+description: "Список боевых девиантов и способы их получения."
 hub:
   - "deviants"
 order: 71
