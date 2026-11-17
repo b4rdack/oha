@@ -8,7 +8,7 @@ hub:
 order: 71
 image: /static/art/0209.webp
 ---
-![[art/0003.webp]]  
+![banner](/static/art/0003.webp)  
 
 ## Физический урон
 Эмиссар бабочки  
