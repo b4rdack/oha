@@ -112,7 +112,7 @@ collections:
       by: "fm.order"
       dir: "asc"
       nulls_last: true
-    limit: 50
+    limit: 500
 
   home_favorites:
     kind: "filter"
