@@ -99,7 +99,7 @@ collections:
       by: "title"
       dir: "asc"
       nulls_last: true
-    limit: 50
+    limit: 500
 
   home_articles:
     kind: "filter"
