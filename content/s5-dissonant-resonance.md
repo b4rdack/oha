@@ -17,4 +17,6 @@ image: /static/vision-wheel/s5-logo.webp
 
 ## 3️⃣ МЕХАНИКИ
 
+![[vision-wheel/s5-mech-1.webp]]  
+
 ![[vision-wheel/s5-echo-war.webp]]
